@@ -1,31 +1,19 @@
-# 🧾 Expense Tracker
+# 💰 Expense Tracker (Python)
 
 A simple command-line Expense Tracker built using Python.  
-This project allows users to add expenses, save them into a CSV file, and view spending summaries based on categories and total budget.
-
-The project was created while learning Python fundamentals and focuses on understanding real programming concepts through a practical project.
+This project helps users add expenses, store them in a JSON file, and view spending summaries based on categories and budget.
 
 ---
 
 # 🚀 Features
 
-- Add new expenses
-- Categorize expenses
-- Save expenses into a CSV file
-- View category-wise spending summary
-- Calculate total spent amount
-- Track remaining budget
+- Add expenses
+- Store data in JSON format
+- View expense summary
+- Category-wise expense tracking
+- Budget tracking
 - Simple menu-driven interface
-- Beginner-friendly project structure
-
----
-
-# 🛠️ Technologies Used
-
-- Python
-- File Handling
-- Object-Oriented Programming (OOP)
-- CSV Storage
+- Object-Oriented Programming (OOP) implementation
 
 ---
 
@@ -36,107 +24,107 @@ expense-tracker/
 │
 ├── main.py
 ├── expense.py
-├── expenses.csv
+├── expenses.json
 └── README.md
 ```
 
 ---
 
-# 📘 Concepts Used
+# 🛠 Technologies Used
 
-This project covers several important Python concepts:
-
-- Functions
-- While Loops
-- For Loops
-- Match Case Statements
-- Lists
-- Dictionaries
-- Classes and Objects
+- Python
+- JSON
 - File Handling
-- String Formatting
-- Type Conversion
-- User Input Handling
+- OOP Concepts
 
 ---
 
-# ⚙️ How the Project Works
+# 📌 How It Works
 
-## 1. User Selects an Option
+The program follows this flow:
 
-The program displays a menu:
-
-```bash
-===== Expense Tracker =====
-1. Add Expense
-2. View Expense Summary
-3. Exit
+```text
+Start Program
+      ↓
+Display Menu
+      ↓
+Take User Input
+      ↓
+Save Expense to JSON
+      ↓
+Read Expenses
+      ↓
+Generate Summary
 ```
 
 ---
 
-## 2. Add Expense
+# 📄 expense.py
 
-The user enters:
+Contains the `Expense` class.
+
+```python
+class Expense:
+```
+
+The class stores:
+
 - Expense name
-- Expense amount
 - Expense category
+- Expense amount
+
+---
+
+# 📄 main.py
+
+Contains the main logic of the application:
+
+- Menu system
+- Adding expenses
+- Saving data
+- Reading JSON
+- Summarizing expenses
+
+---
+
+# 📦 JSON Storage Example
+
+Expenses are stored in `expenses.json`
 
 Example:
 
-```bash
-Enter expense name: Pizza
-Enter the amount: 300
+```json
+[
+    {
+        "name": "Pizza",
+        "category": "Food",
+        "amount": 250
+    },
+    {
+        "name": "Shoes",
+        "category": "Shopping",
+        "amount": 1200
+    }
+]
 ```
 
 ---
 
-## 3. Save Expense
+# ▶️ How to Run
 
-The expense is saved into `expenses.csv`.
+## Step 1
 
-Example stored data:
-
-```csv
-Pizza,Food,300
-Movie,Fun,500
-```
-
----
-
-## 4. View Summary
-
-The program:
-- Reads all expenses from the CSV file
-- Calculates category-wise totals
-- Calculates total spending
-- Shows remaining budget
-
-Example:
+Clone the repository
 
 ```bash
-Expenses By Category:
-
-Food: $300.00
-Fun: $500.00
-
-Total Spent: $800.00
-Remaining Budget: $1200.00
+git clone <repository-link>
 ```
 
 ---
 
-# ▶️ How to Run the Project
+## Step 2
 
-## Step 1 — Clone the Repository
-
-```bash
-git clone <your-repository-link>
-```
-
----
-
-## Step 2 — Open Project Folder
+Open project folder
 
 ```bash
 cd expense-tracker
@@ -144,7 +132,9 @@ cd expense-tracker
 
 ---
 
-## Step 3 — Run the Program
+## Step 3
+
+Run the program
 
 ```bash
 python main.py
@@ -152,33 +142,72 @@ python main.py
 
 ---
 
-# 🧠 What I Learned From This Project
+# 📋 Menu Options
 
-This project helped me understand:
-- How real programs are structured
-- How data is stored using files
-- How functions work together
-- How objects and classes are used
-- How loops and conditions control program flow
-
----
-
-# 📸 Sample Output
-
-```bash
-This expense tracker was created on 18th May
-Running the Expense Tracker
-
-===== Expense Tracker =====
+```text
 1. Add Expense
 2. View Expense Summary
 3. Exit
-
-Enter your choice:
 ```
+
+---
+
+# 🧠 Concepts Used
+
+This project covers:
+
+- Variables
+- Functions
+- Loops
+- Conditional Statements
+- Lists
+- Dictionaries
+- Classes & Objects
+- File Handling
+- JSON Handling
+- Exception Handling
+
+---
+
+# ⚠️ Current Limitations
+
+- No delete expense feature
+- No edit expense feature
+- No input validation for invalid numbers
+- Entire JSON file rewrites after every save
+- No database integration
+
+---
+
+# 🔥 Future Improvements
+
+Possible upgrades:
+
+- Add expense deletion
+- Add expense editing
+- Monthly reports
+- Data visualization
+- SQLite database integration
+- GUI version using Tkinter
+- Web version using Flask or FastAPI
+
+---
+
+# 📚 Learning Outcome
+
+This project is useful for beginners learning:
+
+- Python basics
+- File handling
+- JSON
+- OOP
+- Program structure
+- Data flow in applications
 
 ---
 
 # 👨‍💻 Author
 
-Created as a beginner Python project while learning programming fundamentals and building hands-on projects.
+Created as a beginner Python learning project on 18th May.
+
+
